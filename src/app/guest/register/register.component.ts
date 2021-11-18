@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {User} from "../../models/user.model";
 import {faUserCircle} from "@fortawesome/free-solid-svg-icons";
 import {AuthenticationService} from "../../services/authentication.service";

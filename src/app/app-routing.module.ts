@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, RouterState, Routes } from '@angular/router';
-import { Router } from '@angular/router';
+import { Router, RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin/admin/admin.component';
 import { NotFoundComponent } from './error/not-found/not-found.component';
 import { UnauthorizedComponent } from './error/unauthorized/unauthorized.component';
