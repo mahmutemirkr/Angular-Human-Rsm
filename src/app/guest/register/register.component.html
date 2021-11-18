@@ -1,55 +1,73 @@
 <div class="container mt-5">
     <div class="card ms-auto me-auto p-3 shadow-lg custom-card">
-
         <fa-icon [icon]="faUser" class="ms-auto me-auto user-icon"></fa-icon>
 
-        <form>
+        <form #f="ngForm" (ngSubmit)="f.form.valid && register()">
+
+            <div class="alert alert-danger" *ngIf="errorMessage">
+                {{errorMessage}}
+            </div>
+
             <div class="form-group">
                 <label for="nameSurname"></label>
-                <input 
-                    type="text" 
-                    id="nameSurname" 
-                    class="form-control"
-                    placeholder="Ad Soyad"
-                    required
-                    />
-                <div class="alert-danger">
-                    Girilmesi Zorunlu
+                <input
+                  type="text"
+                  id="nameSurname"
+                  name="nameSurname"
+                  placeholder="Ad Soyad"
+                  [(ngModel)]="user.nameSurname"
+                  #nameSurname="ngModel"
+                  class="form-control"
+                  required
+                />
+                <div class="alert-danger" *ngIf="!nameSurname.valid && f.submitted">
+                  Girilmesi Zorunlu
                 </div>
-            </div>
+              </div>
 
-            <div class="form-group">
+              <div class="form-group">
                 <label for="username"></label>
-                <input 
-                    type="text" 
-                    id="username" 
-                    class="form-control"
-                    placeholder="Kullanıcı Adı"
-                    required
-                    />
-                <div class="alert-danger">
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  placeholder="Kullanıcı Adı"
+                  [(ngModel)]="user.username"
+                  #username="ngModel"
+                  class="form-control"
+                  required
+                />
+                <div class="alert-danger" *ngIf="!username.valid && f.submitted">
                     Girilmesi Zorunlu
                 </div>
-            </div>
-
-            <div class="form-group">
+              </div>
+        
+              <div class="form-group">
                 <label for="password"></label>
-                <input 
-                    type="password" 
-                    id="password" 
-                    class="form-control"
-                    placeholder="Parola"
-                    required
-                    />
-                <div class="alert-danger">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Parola"
+                  [(ngModel)]="user.password"
+                  #password="ngModel"
+                  class="form-control"
+                  required
+                />
+                <div class="alert-danger" *ngIf="!password.valid && f.submitted">
                     Girilmesi Zorunlu
                 </div>
-            </div>
+              </div>
+        
 
             <button type="submit" class="btn btn-outline-primary w-100 mt-3">
-                SignUp
+                Üye Ol
             </button>
         </form>
+
+        <a [routerLink]="['/login']" class="btn btn-link" style="color: darkgray;">
+            I have an account!
+          </a>
 
     </div>
 </div>
