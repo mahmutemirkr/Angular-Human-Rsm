@@ -4,7 +4,7 @@ export class User{
     id: number | undefined;
     username: string = "";
     password: string = "";
-    nameSurname:string = "";
+    nameSurname: string = "";
     token: string = "";
     role: Role = Role.USER;
 }

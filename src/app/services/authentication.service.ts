@@ -5,7 +5,7 @@ import {environment} from "../../environments/environment";
 import {HttpClient} from "@angular/common/http";
 import {map} from "rxjs/operators";
 
-const API_URL = '${environment.BASE_URL}/api/authentication'
+const API_URL = `${environment.BASE_URL}/api/authentication/`
 
 @Injectable({
   providedIn: 'root'
