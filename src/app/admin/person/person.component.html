@@ -1,0 +1,224 @@
+<div class="modal fade" id="bookModal" tabIndex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form #f="ngForm" (ngSubmit)="f.form.valid && savePerson()">
+  
+          <div class="modal-header">
+            <h5 class="modal-title">Person Details</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+  
+          <div class="modal-body">
+  
+            <div class="alert alert-danger" *ngIf="errorMessage">
+              <strong>Error!</strong> {{errorMessage}}
+            </div>
+  
+            <div class="form-group">
+              <label for="title">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-control"
+                [(ngModel)]="person.name"
+                #name="ngModel"
+                required
+              />
+              <div class="alert-danger" *ngIf="f.submitted && !name.valid">
+                Person title is required.
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label for="author">Surname</label>
+              <input
+                type="text"
+                id="surname"
+                name="surname"
+                class="form-control"
+                [(ngModel)]="person.surname"
+                #surname="ngModel"
+                required
+              />
+              <div class="alert-danger" *ngIf="f.submitted && !surname.valid">
+                surname author is required.
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label for="price">Age</label>
+              <input
+                type="number"
+                id="age"
+                name="age"
+                class="form-control"
+                [(ngModel)]="person.age"
+                #age="ngModel"
+                required
+              />
+              <div class="alert-danger" *ngIf="f.submitted && (!age.valid || person.age <= 0)">
+                Price is required and should be greater than 0.
+              </div>
+            </div>
+
+            <div class="form-group">
+                <label for="author">Gender</label>
+                <input
+                  type="text"
+                  id="gender"
+                  name="gender"
+                  class="form-control"
+                  [(ngModel)]="person.gender"
+                  #gender="ngModel"
+                  required
+                />
+                <div class="alert-danger" *ngIf="f.submitted && !gender.valid">
+                  surname author is required.
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="author">militaryStatus</label>
+                <input
+                  type="text"
+                  id="militaryStatus"
+                  name="militaryStatus"
+                  class="form-control"
+                  [(ngModel)]="person.militaryStatus"
+                  #militaryStatus="ngModel"
+                  required
+                />
+                <div class="alert-danger" *ngIf="f.submitted && !militaryStatus.valid">
+                  surname author is required.
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="militaryStatus">educationStatus</label>
+                <input
+                  type="text"
+                  id="militaryStatus"
+                  name="militaryStatus"
+                  class="form-control"
+                  [(ngModel)]="person.militaryStatus"
+                  #militaryStatus="ngModel"
+                  required
+                />
+                <div class="alert-danger" *ngIf="f.submitted && !militaryStatus.valid">
+                  surname author is required.
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="province">province</label>
+                <input
+                  type="text"
+                  id="province"
+                  name="province"
+                  class="form-control"
+                  [(ngModel)]="person.gender"
+                  #province="ngModel"
+                  required
+                />
+                <div class="alert-danger" *ngIf="f.submitted && !province.valid">
+                  surname author is required.
+                </div>
+              </div>
+
+
+              <div class="form-group">
+                <label for="district">discricts</label>
+                <input
+                  type="text"
+                  id="district"
+                  name="district"
+                  class="form-control"
+                  [(ngModel)]="person.district"
+                  #district="ngModel"
+                  required
+                />
+                <div class="alert-danger" *ngIf="f.submitted && !district.valid">
+                  surname author is required.
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="language">Language</label>
+                <input
+                  type="text"
+                  id="language"
+                  name="language"
+                  class="form-control"
+                  [(ngModel)]="person.gender"
+                  #language="ngModel"
+                  required
+                />
+                <div class="alert-danger" *ngIf="f.submitted && !language.valid">
+                  surname author is required.
+                </div>
+              </div>
+
+
+              <div class="form-group">
+                <label for="programmingLanguage">programmingLanguage</label>
+                <input
+                  type="text"
+                  id="programmingLanguage"
+                  name="programmingLanguage"
+                  class="form-control"
+                  [(ngModel)]="person.gender"
+                  #programmingLanguage="ngModel"
+                  required
+                />
+                <div class="alert-danger" *ngIf="f.submitted && !programmingLanguage.valid">
+                  surname author is required.
+                </div>
+              </div>
+
+
+              <div class="form-group">
+                <label for="hobbies">hobbies</label>
+                <input
+                  type="text"
+                  id="hobbies"
+                  name="hobbies"
+                  class="form-control"
+                  [(ngModel)]="person.hobbies"
+                  #hobbies="ngModel"
+                  required
+                />
+                <div class="alert-danger" *ngIf="f.submitted && !hobbies.valid">
+                  surname author is required.
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="author">certificates</label>
+                <input
+                  type="text"
+                  id="certificates"
+                  name="certificates"
+                  class="form-control"
+                  [(ngModel)]="person.certificates"
+                  #certificates="ngModel"
+                  required
+                />
+                <div class="alert-danger" *ngIf="f.submitted && !certificates.valid">
+                  surname author is required.
+                </div>
+              </div>
+  
+  
+  
+          </div>
+  
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+            <button class="btn btn-primary" type="submit">Gönder</button>
+          </div>
+  
+        </form>
+      </div>
+    </div>
+  </div>

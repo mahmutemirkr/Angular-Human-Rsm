@@ -12,6 +12,7 @@ import { AdminComponent } from './admin/admin/admin.component';
 import { NotFoundComponent } from './error/not-found/not-found.component';
 import { UnauthorizedComponent } from './error/unauthorized/unauthorized.component';
 import { FormsModule } from '@angular/forms';
+import { PersonComponent } from './admin/person/person.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FormsModule } from '@angular/forms';
     AdminComponent,
     NotFoundComponent,
     UnauthorizedComponent,
+    PersonComponent,
   ],
   imports: [
     BrowserModule,
