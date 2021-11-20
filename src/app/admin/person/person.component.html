@@ -15,197 +15,209 @@
             </div>
   
             <div class="form-group">
-              <label for="title">Name</label>
+              <label for="name"></label>
               <input
                 type="text"
                 id="name"
                 name="name"
                 class="form-control"
+                placeholder="Name"
                 [(ngModel)]="person.name"
                 #name="ngModel"
                 required
               />
               <div class="alert-danger" *ngIf="f.submitted && !name.valid">
-                Person title is required.
+                Girilmesi Zorunlu
               </div>
             </div>
   
             <div class="form-group">
-              <label for="author">Surname</label>
+              <label for="surname"></label>
               <input
                 type="text"
                 id="surname"
                 name="surname"
                 class="form-control"
+                placeholder="Surname"
                 [(ngModel)]="person.surname"
                 #surname="ngModel"
                 required
               />
               <div class="alert-danger" *ngIf="f.submitted && !surname.valid">
-                surname author is required.
+                Girilmesi Zorunlu
               </div>
             </div>
   
             <div class="form-group">
-              <label for="price">Age</label>
+              <label for="age"></label>
               <input
                 type="number"
                 id="age"
                 name="age"
                 class="form-control"
+                placeholder="Age"
                 [(ngModel)]="person.age"
                 #age="ngModel"
                 required
               />
               <div class="alert-danger" *ngIf="f.submitted && (!age.valid || person.age <= 0)">
-                Price is required and should be greater than 0.
+                Sıfırdan küçük ve eşit olamaz
               </div>
             </div>
 
             <div class="form-group">
-                <label for="author">Gender</label>
+                <label for="gender"></label>
                 <input
                   type="text"
                   id="gender"
                   name="gender"
                   class="form-control"
+                  placeholder="Gender"
                   [(ngModel)]="person.gender"
                   #gender="ngModel"
                   required
                 />
                 <div class="alert-danger" *ngIf="f.submitted && !gender.valid">
-                  surname author is required.
+                  Girilmesi Zorunlu
                 </div>
               </div>
 
               <div class="form-group">
-                <label for="author">militaryStatus</label>
+                <label for="militaryStatus"></label>
                 <input
                   type="text"
                   id="militaryStatus"
                   name="militaryStatus"
                   class="form-control"
+                  placeholder="militaryStatus"
                   [(ngModel)]="person.militaryStatus"
                   #militaryStatus="ngModel"
                   required
                 />
                 <div class="alert-danger" *ngIf="f.submitted && !militaryStatus.valid">
-                  surname author is required.
+                  Girilmesi Zorunlu
                 </div>
               </div>
 
               <div class="form-group">
-                <label for="militaryStatus">educationStatus</label>
+                <label for="educationStatus"></label>
                 <input
                   type="text"
-                  id="militaryStatus"
-                  name="militaryStatus"
+                  id="educationStatus"
+                  name="educationStatus"
                   class="form-control"
-                  [(ngModel)]="person.militaryStatus"
-                  #militaryStatus="ngModel"
+                  placeholder="educationStatus"
+                  [(ngModel)]="person.educationStatus"
+                  #educationStatus="ngModel"
                   required
                 />
-                <div class="alert-danger" *ngIf="f.submitted && !militaryStatus.valid">
-                  surname author is required.
+                <div class="alert-danger" *ngIf="f.submitted && !educationStatus.valid">
+                  Girilmesi Zorunlu
                 </div>
               </div>
 
               <div class="form-group">
-                <label for="province">province</label>
+                <label for="province"></label>
                 <input
                   type="text"
                   id="province"
                   name="province"
                   class="form-control"
-                  [(ngModel)]="person.gender"
+                  placeholder="province"
+                  [(ngModel)]="person.province"
                   #province="ngModel"
                   required
                 />
                 <div class="alert-danger" *ngIf="f.submitted && !province.valid">
-                  surname author is required.
+                  Girilmesi Zorunlu
                 </div>
               </div>
 
 
               <div class="form-group">
-                <label for="district">discricts</label>
+                <label for="district"></label>
                 <input
                   type="text"
                   id="district"
                   name="district"
                   class="form-control"
+                  placeholder="district"
                   [(ngModel)]="person.district"
                   #district="ngModel"
                   required
                 />
                 <div class="alert-danger" *ngIf="f.submitted && !district.valid">
-                  surname author is required.
+                  Girilmesi Zorunlu
                 </div>
               </div>
 
               <div class="form-group">
-                <label for="language">Language</label>
+                <label for="language"></label>
                 <input
                   type="text"
                   id="language"
                   name="language"
                   class="form-control"
-                  [(ngModel)]="person.gender"
+                  placeholder="Language"
+                  [(ngModel)]="person.language"
                   #language="ngModel"
                   required
                 />
                 <div class="alert-danger" *ngIf="f.submitted && !language.valid">
-                  surname author is required.
+                  Girilmesi Zorunlu
                 </div>
               </div>
 
 
               <div class="form-group">
-                <label for="programmingLanguage">programmingLanguage</label>
+                <label for="programmingLanguage"></label>
                 <input
                   type="text"
                   id="programmingLanguage"
                   name="programmingLanguage"
                   class="form-control"
-                  [(ngModel)]="person.gender"
+                  placeholder="programmingLanguage"
+                  [(ngModel)]="person.programmingLanguage"
                   #programmingLanguage="ngModel"
                   required
                 />
                 <div class="alert-danger" *ngIf="f.submitted && !programmingLanguage.valid">
-                  surname author is required.
+                  Girilmesi Zorunlu
                 </div>
               </div>
 
 
               <div class="form-group">
-                <label for="hobbies">hobbies</label>
+                <label for="hobbies"></label>
                 <input
                   type="text"
                   id="hobbies"
                   name="hobbies"
                   class="form-control"
+                  placeholder="hobbies"
                   [(ngModel)]="person.hobbies"
                   #hobbies="ngModel"
                   required
                 />
                 <div class="alert-danger" *ngIf="f.submitted && !hobbies.valid">
-                  surname author is required.
+                  Girilmesi Zorunlu
                 </div>
               </div>
 
               <div class="form-group">
-                <label for="author">certificates</label>
+                <label for="certificates"></label>
                 <input
                   type="text"
                   id="certificates"
                   name="certificates"
                   class="form-control"
+                  placeholder="certificates"
                   [(ngModel)]="person.certificates"
                   #certificates="ngModel"
                   required
                 />
                 <div class="alert-danger" *ngIf="f.submitted && !certificates.valid">
-                  surname author is required.
+                  Girilmesi Zorunlu
                 </div>
               </div>
   
