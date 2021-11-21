@@ -54,8 +54,8 @@
               <td>{{item.hobbies}}</td>
               <td>{{item.certificates}}</td>
               <td>
-                <button class="btn btn-primary me-1" (click)="editPersonRequest(item)">Sil</button>
-                <button class="btn btn-danger" (click)="deletePerson(item, ind)">Düzenle</button>
+                <button class="btn btn-primary me-1" (click)="editPersonRequest(item)">Düzenle</button>
+                <button class="btn btn-danger" (click)="deletePerson(item, ind)">Sil</button>
               </td>
             </tr>
             </tbody>
@@ -65,4 +65,4 @@
     </div>
   </div>
 
-  <app-person></app-person>
+  <app-person [person]="selectedPerson" (save)="savePersonWatcher($event)"></app-person>
