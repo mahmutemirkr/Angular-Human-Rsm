@@ -13,17 +13,20 @@
     <li class="nav-item" *ngIf="isAdmin()">
       <a [routerLink]="['/admin']" routerLinkActive="active" class="nav-link">Admin</a>
     </li>
+    <li class="nav-item" *ngIf="isAdmin()">
+      <a [routerLink]="['/search']" routerLinkActive="active" class="nav-link">Arama</a>
+    </li>
     <li class="nav-item">
-      <a [routerLink]="['/home']" routerLinkActive="active" class="nav-link">Home</a>
+      <a [routerLink]="['/home']" routerLinkActive="active" class="nav-link">Anasayfa</a>
     </li>
   </div>
 
   <div class="navbar-nav ms-auto" *ngIf="!currentUser?.id">
     <li class="nav-item">
-      <a [routerLink]="['/register']" routerLinkActive="active" class="nav-link">Sign Up</a>
+      <a [routerLink]="['/register']" routerLinkActive="active" class="nav-link">Üye Ol</a>
     </li>
     <li class="nav-item me-1">
-      <a [routerLink]="['/login']" routerLinkActive="active" class="nav-link">Sign In</a>
+      <a [routerLink]="['/login']" routerLinkActive="active" class="nav-link">Giriş Yap</a>
     </li>
   </div>
 
@@ -36,7 +39,7 @@
     <li class="nav-item me-1">
       <a (click)="logOut()" class="nav-link"
       style="cursor: pointer;">
-        Sign Out
+        Çıkış Yap
       </a>
     </li>
   </div>
